@@ -6,6 +6,8 @@ import { RenderBuilderContent } from "../../components/builder";
 // Replace with your Public API Key
 // builder.init('e53fe4ab5eb241c2a15fa2e40c8f2502');
 builder.init(process.env.NEXT_PUBLIC_BUILDER_API_KEY || "");
+console.log(process.env.NEXT_PUBLIC_BUILDER_API_KEY);
+console.log('-------------------');
 
 interface PageProps {
   params: Promise<{ page: string[] }>;
@@ -29,7 +31,7 @@ export default async function Page(props: PageProps) {
     })
     // Convert the result to a promise
     .toPromise();
-    console.log(content);
+    // console.log(content);
 
   return (
     <>
